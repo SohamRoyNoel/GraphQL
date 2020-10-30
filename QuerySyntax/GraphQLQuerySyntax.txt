@@ -1,0 +1,70 @@
+# REL: Users's company
+# {
+#   user(id: "21") {
+#     firstname
+#     company {
+#       id
+#       name
+#       description
+#     }
+#   }
+# }
+
+# REL: Companies' User
+# query findUserByCompany {
+#   company(id: "2"){
+#     name
+#     users {
+#       firstname
+#     }
+#   }
+# }
+
+# Named Query
+query findUserByCompany {
+  apple: company(id: "2"){
+    name
+    users {
+      ...companyDetails
+    }
+  }
+  google: company(id: "1"){
+    name
+    users {
+      ...companyDetails
+    }
+  }
+}
+
+# Fragmentation
+fragment companyDetails on User {
+    id
+    firstname
+    age
+}
+
+MUTATATION
+
+# mutation {
+#   addUser(firstname:"Sunil Garol", age: 20) {
+#     id,
+#     firstname,
+#     age
+#   }
+# }
+
+# mutation {
+#   deleteUser(id:"sP0HgL3") {
+#     id,
+#     firstname,
+#     age
+#   }
+# }
+
+mutation {
+  editUser(id:"22", firstname:"Bokachor Sunil r chamcha Oscar", age:108) {
+    id,
+    firstname,
+    age
+  }
+}

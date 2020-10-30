@@ -1,6 +1,38 @@
 {
-      "users": [
-            { "id": "12", "firstname": "Sunil Garol", "age":15 },
-            { "id": "21", "firstname":"Potol Garol", "age":20 }
-      ]
+  "users": [
+    {
+      "id": "21",
+      "firstname": "Jim Garol",
+      "age": 20,
+      "companyId": "2"
+    },
+    {
+      "id": "22",
+      "firstname": "Bokachor Sunil r chamcha Oscar",
+      "age": 108,
+      "companyId": "1"
+    },
+    {
+      "firstname": "Soahm",
+      "age": 20,
+      "id": "PtikmAj"
+    },
+    {
+      "firstname": "Bokachor Sunil",
+      "age": 108,
+      "id": "4oWsDcw"
+    }
+  ],
+  "companies": [
+    {
+      "id": "1",
+      "name": "Apple",
+      "description": "iphone"
+    },
+    {
+      "id": "2",
+      "name": "Google",
+      "description": "search"
+    }
+  ]
 }
